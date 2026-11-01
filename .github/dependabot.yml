@@ -1,0 +1,29 @@
+version: 2
+
+updates:
+  - package-ecosystem: mix
+    directory: /
+    schedule:
+      interval: weekly
+    # Dependabot has no Hex security updates, so transitive deps must be
+    # included here for vulnerable ones (e.g. plug_crypto) to get a PR at all.
+    allow:
+      - dependency-type: all
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      mix-minor-and-patch:
+        update-types:
+          - minor
+          - patch
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: chore(ci)
+    groups:
+      actions:
+        patterns:
+          - "*"
