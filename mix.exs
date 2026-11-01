@@ -3,7 +3,7 @@ defmodule ScalarPlug.MixProject do
 
   @description "Maintained fork of tuist/scalar_plug. An Elixir plug to integrate Scalar API documentation into your application. When a request URL path matches the configured path, it returns an HTML response initializing Scalar."
   @source_url "https://github.com/Aroy-Art/scalar_plug"
-  @version "0.3.0"
+  @version "0.3.1"
 
   def project do
     [
